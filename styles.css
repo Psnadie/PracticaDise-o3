@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+:root {
+  /* Fuentes */
+  --font-heading: 'Cormorant Garamond', serif;
+  --font-body: 'Inter', sans-serif;
+  
+  /* Colores */
+  --color-white: #FFFFFF;
+  --color-black: #0A0A0A;
+  --color-gold: #D4AF37;
+  --color-gold-light: #F4E4C1;
+  --color-gold-dark: #B8941E;
+  --color-grey-light: #F5F5F5;
+  --color-grey: #6B6B6B;
+  --color-grey-dark: #2A2A2A;
+  
+  /* Tamaños de fuente */
+  --font-size-h1: clamp(2rem, 1.143rem + 3.81vw, 3.5rem);
+  --font-size-h2: clamp(1.5rem, 0.857rem + 2.86vw, 2.5rem);
+  --font-size-h3: clamp(1.25rem, 0.679rem + 2.54vw, 2rem);
+  --font-size-body: clamp(0.875rem, 0.768rem + 0.48vw, 1rem);
+  --font-size-small: clamp(0.75rem, 0.679rem + 0.32vw, 0.875rem);
+  
+  /* Espaciado */
+  --spacing-xs: 0.5rem;
+  --spacing-sm: 1rem;
+  --spacing-md: 2rem;
+  --spacing-lg: 4rem;
+  --spacing-xl: 6rem;
+}
+
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+}
+
+/* NAVIGATION */
+.main-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 4rem;
+    z-index: 1000;
+    background: linear-gradient(180deg, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0) 100%);
+}
+
+.nav-link {
+    color: var(--color-white);
+    text-decoration: none;
+    font-family: var(--font-body);
+    font-size: var(--font-size-small);
+    font-weight: 500;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: var(--color-gold);
+}
+
+.logo-container {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.logo-image {
+    height: 60px;
+    width: auto;
+}
+
+/* HERO SECTION */
+.hero-section {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.hero-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: 2;
+}
+
+.hero-content {
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+}
+
+.hero-logo img {
+    height: clamp(120px, 15vw, 200px);
+    width: auto;
+}
+
+.reserve-btn {
+    background: transparent;
+    color: var(--color-white);
+    border: 2px solid var(--color-white);
+    padding: 1rem 3rem;
+    font-family: var(--font-body);
+    font-size: var(--font-size-small);
+    font-weight: 500;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.reserve-btn:hover {
+    background: var(--color-white);
+    color: var(--color-black);
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .main-nav {
+        padding: 1.5rem 2rem;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+    }
+    
+    .logo-container {
+        position: relative;
+        left: 0;
+        top: 0;
+        transform: none;
+        order: -1;
+        width: 100%;
+        text-align: center;
+        margin-bottom: 1rem;
+    }
+    
+    .nav-link {
+        font-size: 0.75rem;
+    }
+}
