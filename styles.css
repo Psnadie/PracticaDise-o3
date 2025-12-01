@@ -167,6 +167,10 @@ nav {
     aspect-ratio: 1.618 / 1;
     background-color: var(--color-black);
 
+    &>div {
+      border: var(--color-white) 2px solid;
+    }
+
     & .div1 {
       grid-column: span 3 / span 3;
       grid-row: span 3 / span 3;
@@ -228,6 +232,10 @@ nav {
     aspect-ratio: 1.618 / 1;
     background-color: var(--color-black);
     padding: 2px;
+
+    &>div {
+      border: var(--color-white) 2px solid;
+    }
 
     & .div1 {
       grid-row: span 2 / span 2;
@@ -298,39 +306,269 @@ nav {
 }
 
 #Menu {
+  padding-top: 7.5%;
 
   & .card-container {
     width: 80%;
     margin: auto;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: space-between;
+    padding-top: 5%;
     padding-bottom: 5%;
 
-    & .card {
-      flex: 30%;
+    & .cont {
       display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: space-evenly;
-      padding: 2%;
-      color: var(--color-white);
+      width: 100%;
+      padding-bottom: 5%;
 
-      & div {
-        font-family: var(--font-body);
-        font-size: var(--font-size-body);
-        width: 100%;
+      & .card {
+        flex: 40%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        padding: 2%;
+        color: var(--color-white);
+        text-align: center;
+
+        & div {
+          font-family: var(--font-body);
+          font-size: var(--font-size-body);
+          width: 100%;
+
+        }
+
+        &div:hover {
+          color: var(--color-gold);
+        }
+      }
+
+      & .card-img {
+        flex: 60%;
+
+        & .img-sweet {
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          grid-template-rows: repeat(5, 1fr);
+          gap: 8px;
+          height: 100%;
+
+          &>.div1 {
+            grid-column: span 2 / span 2;
+            grid-row: span 2 / span 2;
+            background-image: url("assets/4737.jpg");
+            background-position: center center;
+            /* centrado horizontal y vertical */
+            background-size: cover;
+            /* cubre todo el espacio */
+            background-repeat: no-repeat;
+          }
+
+          &>.div2 {
+            grid-row: span 2 / span 2;
+            grid-column-start: 3;
+            background-image: url("assets/4737.jpg");
+            background-position: center center;
+            /* centrado horizontal y vertical */
+            background-size: cover;
+            /* cubre todo el espacio */
+            background-repeat: no-repeat;
+          }
+
+          &>.div3 {
+            grid-column-start: 3;
+            grid-row-start: 5;
+            background-image: url("assets/4737.jpg");
+            background-position: center center;
+            /* centrado horizontal y vertical */
+            background-size: cover;
+            /* cubre todo el espacio */
+            background-repeat: no-repeat;
+          }
+
+          &>.div4 {
+            grid-column: span 2 / span 2;
+            grid-column-start: 1;
+            grid-row-start: 5;
+            background-image: url("assets/4737.jpg");
+            background-position: center center;
+            /* centrado horizontal y vertical */
+            background-size: cover;
+            /* cubre todo el espacio */
+            background-repeat: no-repeat;
+          }
+
+          &>.div6 {
+            grid-column: span 3 / span 3;
+            grid-row: span 2 / span 2;
+            grid-column-start: 1;
+            grid-row-start: 3;
+            background-image: url("assets/4737.jpg");
+            background-position: center center;
+            /* centrado horizontal y vertical */
+            background-size: cover;
+            /* cubre todo el espacio */
+            background-repeat: no-repeat;
+          }
+
+        }
+
+        & .img-salt {
+          display: grid;
+          grid-template-columns: repeat(5, 1fr);
+          grid-template-rows: repeat(6, 1fr);
+          gap: 8px;
+          height: 100%;
+
+          &>.div1 {
+            grid-column: span 3 / span 3;
+            grid-row: span 4 / span 4;
+            background-image: url("assets/4737.jpg");
+            background-position: center center;
+            /* centrado horizontal y vertical */
+            background-size: cover;
+            /* cubre todo el espacio */
+            background-repeat: no-repeat;
+          }
+
+          &>.div2 {
+            grid-column: span 2 / span 2;
+            grid-row: span 2 / span 2;
+            grid-column-start: 4;
+            background-image: url("assets/4737.jpg");
+            background-position: center center;
+            /* centrado horizontal y vertical */
+            background-size: cover;
+            /* cubre todo el espacio */
+            background-repeat: no-repeat;
+          }
+
+          &>.div3 {
+            grid-column: span 2 / span 2;
+            grid-row: span 2 / span 2;
+            grid-column-start: 4;
+            grid-row-start: 3;
+            background-image: url("assets/4737.jpg");
+            background-position: center center;
+            /* centrado horizontal y vertical */
+            background-size: cover;
+            /* cubre todo el espacio */
+            background-repeat: no-repeat;
+          }
+
+          &>.div4 {
+            grid-column: span 2 / span 2;
+            grid-row: span 2 / span 2;
+            grid-row-start: 5;
+            background-image: url("assets/4737.jpg");
+            background-position: center center;
+            /* centrado horizontal y vertical */
+            background-size: cover;
+            /* cubre todo el espacio */
+            background-repeat: no-repeat;
+          }
+
+          &>.div5 {
+            grid-column: span 3 / span 3;
+            grid-row: span 2 / span 2;
+            grid-column-start: 3;
+            grid-row-start: 5;
+            background-image: url("assets/4737.jpg");
+            background-position: center center;
+            /* centrado horizontal y vertical */
+            background-size: cover;
+            /* cubre todo el espacio */
+            background-repeat: no-repeat;
+          }
+
+        }
+
+        & .img-sweet {
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          grid-template-rows: repeat(5, 1fr);
+          gap: 8px;
+          height: 100%;
+
+          &>.div1 {
+            grid-column: span 2 / span 2;
+            grid-row: span 2 / span 2;
+            background-image: url("assets/4737.jpg");
+            background-position: center center;
+            /* centrado horizontal y vertical */
+            background-size: cover;
+            /* cubre todo el espacio */
+            background-repeat: no-repeat;
+          }
+
+          &>.div2 {
+            grid-row: span 2 / span 2;
+            grid-column-start: 3;
+            background-image: url("assets/4737.jpg");
+            background-position: center center;
+            /* centrado horizontal y vertical */
+            background-size: cover;
+            /* cubre todo el espacio */
+            background-repeat: no-repeat;
+          }
+
+          &>.div3 {
+            grid-column-start: 3;
+            grid-row-start: 5;
+            background-image: url("assets/4737.jpg");
+            background-position: center center;
+            /* centrado horizontal y vertical */
+            background-size: cover;
+            /* cubre todo el espacio */
+            background-repeat: no-repeat;
+          }
+
+          &>.div4 {
+            grid-column: span 2 / span 2;
+            grid-column-start: 1;
+            grid-row-start: 5;
+            background-image: url("assets/4737.jpg");
+            background-position: center center;
+            /* centrado horizontal y vertical */
+            background-size: cover;
+            /* cubre todo el espacio */
+            background-repeat: no-repeat;
+          }
+
+          &>.div6 {
+            grid-column: span 3 / span 3;
+            grid-row: span 2 / span 2;
+            grid-column-start: 1;
+            grid-row-start: 3;
+            background-image: url("assets/4737.jpg");
+            background-position: center center;
+            /* centrado horizontal y vertical */
+            background-size: cover;
+            /* cubre todo el espacio */
+            background-repeat: no-repeat;
+          }
+
+        }
 
       }
 
-      &div:hover {
-        color: var(--color-gold);
-      }
     }
+
+    & .salt{
+      flex-direction: row-reverse;
+    }
+
+    & .special{
+      
+    }
+
   }
 }
 
-#Menu>h1 {
+#Menu>h2 {
+  margin-top: 7.5%;
   text-align: center;
   font-size: var(--font-size-h1);
   margin-top: 0;
@@ -340,7 +578,13 @@ nav {
 #About {
   display: flex;
   flex-direction: column;
-  padding: 0% 7.5% 0% 7.5%;
+  padding: 7.5%;
+
+  &>h1 {
+    text-align: center;
+    font-size: var(--font-size-h1);
+    margin-bottom: 5%;
+  }
 
   & .chef {
     height: 50vh;
@@ -375,6 +619,7 @@ nav {
   & .asis {
     height: 50vh;
     display: flex;
+    margin-bottom: 5%;
 
     & .iz {
       flex: 1;
@@ -399,6 +644,61 @@ nav {
       }
     }
   }
+
+  & .demas {
+    height: 50vh;
+    display: flex;
+    margin-bottom: 5%;
+    justify-content: space-between;
+
+    & .extra {
+      width: 30%;
+      display: flex;
+      flex-direction: column;
+
+      & .img {
+        &>img {
+          max-width: 100%;
+        }
+      }
+
+      & .desc {
+        padding: 1%;
+      }
+
+    }
+  }
+}
+
+.mission {
+  height: 80vh;
+  background-image: linear-gradient(to left, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0)), url("assets/entrada.jpg");
+  display: flex;
+  justify-content: end;
+  background-size: cover;
+  background-position: center center;
+  /* centrado horizontal y vertical */
+  background-size: cover;
+  /* cubre todo el espacio */
+  background-repeat: no-repeat;
+
+
+  & .mis {
+    width: 50%;
+    padding: 5%;
+    display: flex;
+    flex-direction: column;
+
+    &>h2 {
+      font-size: var(--font-size-h1);
+      margin-bottom: 5%;
+    }
+
+    &>p {
+      font-size: var(--font-size-body);
+    }
+  }
+
 }
 
 .contact {
@@ -552,71 +852,71 @@ footer {
 @media (max-width: 1300px) {
 
   #About {
-  display: flex;
-  flex-direction: column;
-  padding: 0% 7.5% 0% 7.5%;
-
-  & .chef {
-    height: 50vh;
-    display: flex;
-    flex-direction: column-reverse;
-    margin-bottom: 5%;
-
-    & .iz {
-      flex: 3;
-      padding: 5%;
-
-      & h2 {
-        font-size: 2rem;
-      }
-
-      & p {
-        font-size: 1.3rem;
-      }
-
-    }
-
-    & .der {
-      flex: 1;
-      height: 50vh;
-      background-image: url("assets/chef-fondo-negro.jpg");
-      background-position: 50% 25%;
-      /* centrado horizontal y vertical */
-      background-size: cover;
-      /* cubre todo el espacio */
-      background-repeat: no-repeat;
-    }
-  }
-
-  & .asis {
-    height: 50vh;
     display: flex;
     flex-direction: column;
+    padding: 0% 7.5% 0% 7.5%;
 
-    & .iz {
-      flex: 1;
-      background-image: url("assets/asistente-mugshot.jpg");
-      background-position: 50% 25%;
-      /* centrado horizontal y vertical */
-      background-size: cover;
-      /* cubre todo el espacio */
-      background-repeat: no-repeat;
-    }
+    & .chef {
+      height: 50vh;
+      display: flex;
+      flex-direction: column-reverse;
+      margin-bottom: 5%;
 
-    & .der {
-      flex: 1;
-      padding: 5%;
+      & .iz {
+        flex: 3;
+        padding: 5%;
 
-      & h2 {
-        font-size: 2rem;
+        & h2 {
+          font-size: 2rem;
+        }
+
+        & p {
+          font-size: 1.3rem;
+        }
+
       }
 
-      & p {
-        font-size: 1.3rem;
+      & .der {
+        flex: 1;
+        height: 50vh;
+        background-image: url("assets/chef-fondo-negro.jpg");
+        background-position: 50% 25%;
+        /* centrado horizontal y vertical */
+        background-size: cover;
+        /* cubre todo el espacio */
+        background-repeat: no-repeat;
+      }
+    }
+
+    & .asis {
+      height: 50vh;
+      display: flex;
+      flex-direction: column;
+
+      & .iz {
+        flex: 1;
+        background-image: url("assets/asistente-mugshot.jpg");
+        background-position: 50% 25%;
+        /* centrado horizontal y vertical */
+        background-size: cover;
+        /* cubre todo el espacio */
+        background-repeat: no-repeat;
+      }
+
+      & .der {
+        flex: 1;
+        padding: 5%;
+
+        & h2 {
+          font-size: 2rem;
+        }
+
+        & p {
+          font-size: 1.3rem;
+        }
       }
     }
   }
-}
 
   .contact {
     & .divider {
@@ -776,7 +1076,7 @@ footer {
       padding-bottom: 5%;
 
       & .card {
-        width:100%;
+        width: 100%;
         display: flex;
         flex-direction: column;
         align-items: center;
